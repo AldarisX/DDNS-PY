@@ -7,7 +7,6 @@
 
 ## 依赖库
 
-    pip install aliyun-python-sdk-core-v3
     pip install aliyun-python-sdk-httpdns
     pip install requests
 
