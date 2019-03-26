@@ -1,0 +1,16 @@
+{
+    "accessKeyId": "",
+    "secret": "",
+    "useLocIp": true,
+    "protocolType": "http",
+    "sleepTime": 10,
+    "loop": true,
+    "record": [
+        {
+            "DomainName": "misakasubnet.tech",
+            "RR": "test",
+            "Type": "A"
+        }
+    ],
+    "bind": []
+}
