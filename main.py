@@ -4,6 +4,7 @@ from util import ip
 from util import record
 from config import Config
 
+
 def ctrol():
     rip = ip.get_ip()
 
@@ -14,7 +15,7 @@ def ctrol():
     for i, dn in enumerate(dnList):
         if(dn["DomainName"] in domainDict):
             dn["isPass"] = False
-            domainDict[dn["DomainName"]].update(dn)
+            domainDict[dn["DomainName"]].insert(0, dn)
         else:
             dn["isPass"] = False
             records = {dn["DomainName"]: [dn]}
@@ -53,6 +54,7 @@ def ctrol():
                 record.add_record(wdn)
                 print("ADD: " + wdn["RR"]+"." +
                       wdn["DomainName"]+" "+wdn["Value"])
+
 
 if(Config().get_loop()):
     while(Config().get_loop()):
