@@ -1,4 +1,5 @@
 import socket
+import time
 import requests
 from config import Config
 
@@ -19,8 +20,9 @@ def get_ip():
             ip = hreq.text.replace("\n", "")
         except Exception as err:
             print("获取IP失败")
-    print("Your IP is "+ip)
     if(ip == "-1"):
-        return get_ip()
+        time.sleep(10)
+        get_ip()
+    print("Your IP is "+ip)
 
     return ip
